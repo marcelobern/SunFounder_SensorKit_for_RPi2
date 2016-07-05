@@ -11,8 +11,8 @@ ds18b20 = ''
 def setup():
 	global ds18b20
 	for i in os.listdir('/sys/bus/w1/devices'):
-		if i != 'w1-bus-master1':
-			ds18b20 = i
+		if i != 'w1_bus_master1':
+			ds18b20 = i	# Only last entry from "os.listdir" will be used by this code
 
 def read():
 #	global ds18b20
